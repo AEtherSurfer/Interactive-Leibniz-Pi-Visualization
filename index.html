@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Interactive Leibniz Pi Visualization</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <p id='maxY'></p><br/>
+        <p id='pimark'>&pi;</p><br/>
+        <p id='minY'></p><br/>
+
+        <canvas id='canvas1'></canvas>
+
+        <p id='pi'></p>
+
+        <input type='range' min='1' max='100' value='10' id='speedInput' />
+        <p id='speed'>Speed: 10</p>
+
+        <button id='restartBtn' class='btn'>Restart</button>
+
+        <script src='./script.js'></script>
+    </body>
+</html>
