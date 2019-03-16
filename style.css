@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+}
+
+#maxY, #minY, #pimark {
+  display: inline-block;
+  margin: 20px;
+  font-size: 15px;
+  line-height: 15px;
+}
+
+#pimark {
+  margin: 158px 20px;
+  font-size: 20px;
+}
+
+canvas {
+  position: absolute;
+  top: 20px;
+  left: 45px;
+}
+
+#pi {
+  display: block;
+  margin: 20px;
+  font-size: 50px;
+  margin-top: 0;
+}
+
+#speedInput {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 225px;
+  height: 7px;
+  background: #d3d3d3;
+  opacity: 0.5;
+  -webkit-transition: 0.5s opacity;
+  transition: 0.5s opacity;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 20px;
+  margin-top: 40px;
+  display: block;
+}
+
+#speedInput:hover {
+  opacity: 1;
+}
+
+#speedInput::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #a1a1a1;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#speed {
+  margin: 20px;
+  display: block;
+  font-size: 15px;
+}
+
+.btn {
+  background: transparent;
+  border: 1px solid #a1a1a1;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  margin: 10px;
+  -webkit-transition: 0.5s background;
+  transition: 0.5s background;
+  display: inline-block;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+.btn:hover {
+  background: #e3e3e3;
+}
+
+.btn:first-of-type {
+  margin-left: 20px;
+}
