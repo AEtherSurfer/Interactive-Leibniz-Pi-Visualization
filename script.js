@@ -1,5 +1,3 @@
-//Author: Saahil Khatkhate
-
 const canvas1 = document.querySelector('#canvas1');
 const piTxt = document.querySelector('#pi');
 const fpsSlider = document.querySelector('#speedInput');
