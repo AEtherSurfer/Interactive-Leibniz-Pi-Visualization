@@ -90,3 +90,8 @@ canvas {
 .btn:first-of-type {
   margin-left: 20px;
 }
+
+#help {
+  margin-left: 20px;
+  margin-top: 40px;
+}

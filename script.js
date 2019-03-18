@@ -38,8 +38,8 @@ function yLabelsUpdate() {
 function zoom(e) {
   if (e.wheelDelta < 0) {
     if (yConstrain.max < Math.PI + 0.1) {
-      yConstrain.min -= 0.001;
-      yConstrain.max += 0.001;
+      yConstrain.min -= 0.005;
+      yConstrain.max += 0.005;
     } else {
       yConstrain.min -= 0.1;
       yConstrain.max += 0.1;
@@ -49,8 +49,8 @@ function zoom(e) {
       yConstrain.min += 0.1;
       yConstrain.max -= 0.1;
     } else if(yConstrain.max > 0.1 && yConstrain.min < Math.PI - 0.001) {
-      yConstrain.min += 0.001;
-      yConstrain.max -= 0.001;
+      yConstrain.min += 0.005;
+      yConstrain.max -= 0.005;
     }
   }
   yLabelsUpdate();
