@@ -1,5 +1,6 @@
 const canvas1 = document.querySelector('#canvas1');
 const piTxt = document.querySelector('#pi');
+const digitsTxt = document.querySelector('#digitsRight');
 const fpsSlider = document.querySelector('#speedInput');
 const fpsTxt = document.querySelector('#speed');
 const restartBtn = document.querySelector('#restartBtn');
@@ -17,6 +18,7 @@ let iterations = 0;
 let denominator;
 let history = [];
 let piY;
+let digitsRight;
 let vertex = {
   x: null,
   y: null
@@ -29,6 +31,15 @@ let yConstrain = {
 canvas1.width = iw;
 canvas1.height = ih;
 c1.strokeStyle = 'black';
+
+function findDifference(a, b) {
+  a = a.toString().replace('.', '');
+  b = b.toString().replace('.', '');
+  for (let i = 0; i < Math.min(a.length, b.length); i++) {
+    if (a.charAt(i) !== b.charAt(i)) return i;
+  }
+  return 0;
+}
 
 function yLabelsUpdate() {
   minY.innerText = Math.round(100 * yConstrain.min)/100;
@@ -114,7 +125,9 @@ function animateLoop() {
   }
   c1.stroke();
   c1.closePath();
-  
+
+  digitsTxt.innerText = 'Digits correct: ' + findDifference(Math.PI, pi);
+
   iterations++;
 }
 

@@ -6,6 +6,7 @@
   outline: none;
   box-sizing: border-box;
   font-family: 'Montserrat';
+  -webkit-margin-collapse: separate;
 }
 
 #maxY, #minY, #pimark {
@@ -29,8 +30,15 @@ canvas {
 #pi {
   display: block;
   margin: 20px;
+  margin-bottom: 15px;
   font-size: 50px;
+}
+
+#digitsRight {
+  display: block;
+  margin-left: 20px;
   margin-top: 0;
+  font-size: 20px;
 }
 
 #speedInput {
@@ -45,7 +53,7 @@ canvas {
   border-radius: 10px;
   cursor: pointer;
   margin: 20px;
-  margin-top: 40px;
+  margin-top: 48px;
   display: block;
 }
 
@@ -64,7 +72,8 @@ canvas {
 }
 
 #speed {
-  margin: 20px;
+  margin-left: 20px;
+  margin-top: 0;
   display: block;
   font-size: 15px;
 }
@@ -75,7 +84,6 @@ canvas {
   border-radius: 5px;
   padding: 8px 12px;
   cursor: pointer;
-  margin: 10px;
   -webkit-transition: 0.5s background;
   transition: 0.5s background;
   display: inline-block;
