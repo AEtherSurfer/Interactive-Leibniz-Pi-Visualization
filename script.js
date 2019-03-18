@@ -60,7 +60,7 @@ function changeFPS() {
   frameRate = fpsSlider.value;
   fpsTxt.innerText = 'Speed: ' + frameRate;
   clearInterval(loop);
-  loop = setInterval(animate, 1000/frameRate);
+  loop = setInterval(animateLoop, 1000/frameRate);
 }
 
 function restart() {
@@ -84,7 +84,7 @@ function calcPI() {
   }
 }
 
-function animate() {
+function animateLoop() {
   c1.clearRect(0, 0, iw, ih);
   
   calcPI();
@@ -123,4 +123,4 @@ yLabelsUpdate();
 window.addEventListener('wheel', zoom);
 fpsSlider.addEventListener('input', changeFPS);
 restartBtn.addEventListener('click', restart);
-loop = setInterval(animate, 1000/frameRate);
+loop = setInterval(animateLoop, 1000/frameRate);
